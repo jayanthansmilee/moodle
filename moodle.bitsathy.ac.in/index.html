@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us" xml:lang="en-us">
+
+<head>
+    <title>BANNARI AMMAN INSTITUTE OF TECHNOLOGY</title>
+    <link rel="icon" href="https://moodle.bitsathy.ac.in/theme/image.php/adaptable/theme/1695712818/favicon" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="moodle, BANNARI AMMAN INSTITUTE OF TECHNOLOGY" />
+    <link rel="stylesheet" type="text/css" href="https://moodle.bitsathy.ac.in/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" />
+    <script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
+    <link rel="stylesheet" type="text/css" href="https://moodle.bitsathy.ac.in/theme/styles.php/adaptable/1695712818_1693567368/all" />
+    <script>
+        //<![CDATA[
+        var M = {};
+        M.yui = {};
+        M.pageloadstarttime = new Date();
+        M.cfg = {
+            "wwwroot": "https:\/\/moodle.bitsathy.ac.in",
+            "homeurl": {},
+            "sesskey": "2anhuJb98P",
+            "sessiontimeout": "28800",
+            "sessiontimeoutwarning": 1200,
+            "themerev": "1695712818",
+            "slasharguments": 1,
+            "theme": "adaptable",
+            "iconsystemmodule": "core\/icon_system_fontawesome",
+            "jsrev": "1695712818",
+            "admin": "admin",
+            "svgicons": true,
+            "usertimezone": "Asia\/Kolkata",
+            "courseId": 1,
+            "courseContextId": 2,
+            "contextid": 2,
+            "contextInstanceId": 1,
+            "langrev": 1703804948,
+            "templaterev": "1695712818"
+        };
+        var yui1ConfigFn = function(me) {
+            if (/-skin|reset|fonts|grids|base/.test(me.name)) {
+                me.type = 'css';
+                me.path = me.path.replace(/\.js/, '.css');
+                me.path = me.path.replace(/\/yui2-skin/, '/assets/skins/sam/yui2-skin')
+            }
+        };
+        var yui2ConfigFn = function(me) {
+            var parts = me.name.replace(/^moodle-/, '').split('-'),
+                component = parts.shift(),
+                module = parts[0],
+                min = '-min';
+            if (/-(skin|core)$/.test(me.name)) {
+                parts.pop();
+                me.type = 'css';
+                min = ''
+            }
+            if (module) {
+                var filename = parts.join('-');
+                me.path = component + '/' + module + '/' + filename + min + '.' + me.type
+            } else {
+                me.path = component + '/' + component + '.' + me.type
+            }
+        };
+        YUI_config = {
+            "debug": false,
+            "base": "https:\/\/moodle.bitsathy.ac.in\/lib\/yuilib\/3.17.2\/",
+            "comboBase": "https:\/\/moodle.bitsathy.ac.in\/theme\/yui_combo.php?",
+            "combine": true,
+            "filter": null,
+            "insertBefore": "firstthemesheet",
+            "groups": {
+                "yui2": {
+                    "base": "https:\/\/moodle.bitsathy.ac.in\/lib\/yuilib\/2in3\/2.9.0\/build\/",
+                    "comboBase": "https:\/\/moodle.bitsathy.ac.in\/theme\/yui_combo.php?",
+                    "combine": true,
+                    "ext": false,
+                    "root": "2in3\/2.9.0\/build\/",
+                    "patterns": {
+                        "yui2-": {
+                            "group": "yui2",
+                            "configFn": yui1ConfigFn
+                        }
+                    }
+                },
+                "moodle": {
+                    "name": "moodle",
+                    "base": "https:\/\/moodle.bitsathy.ac.in\/theme\/yui_combo.php?m\/1695712818\/",
+                    "combine": true,
+                    "comboBase": "https:\/\/moodle.bitsathy.ac.in\/theme\/yui_combo.php?",
+                    "ext": false,
+                    "root": "m\/1695712818\/",
+                    "patterns": {
+                        "moodle-": {
+                            "group": "moodle",
+                            "configFn": yui2ConfigFn
+                        }
+                    },
+                    "filter": null,
+                    "modules": {
+                        "moodle-core-actionmenu": {
+                            "requires": ["base", "event", "node-event-simulate"]
+                        },
+                        "moodle-core-blocks": {
+                            "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification"]
+                        },
+                        "moodle-core-chooserdialogue": {
+                            "requires": ["base", "panel", "moodle-core-notification"]
+                        },
+                        "moodle-core-dragdrop": {
+                            "requires": ["base", "node", "io", "dom", "dd", "event-key", "event-focus", "moodle-core-notification"]
+                        },
+                        "moodle-core-event": {
+                            "requires": ["event-custom"]
+                        },
+                        "moodle-core-formchangechecker": {
+                            "requires": ["base", "event-focus", "moodle-core-event"]
+                        },
+                        "moodle-core-handlebars": {
+                            "condition": {
+                                "trigger": "handlebars",
+                                "when": "after"
+                            }
+                        },
+                        "moodle-core-languninstallconfirm": {
+                            "requires": ["base", "node", "moodle-core-notification-confirm", "moodle-core-notification-alert"]
+                        },
+                        "moodle-core-lockscroll": {
+                            "requires": ["plugin", "base-build"]
+                        },
+                        "moodle-core-maintenancemodetimer": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-core-notification": {
+                            "requires": ["moodle-core-notification-dialogue", "moodle-core-notification-alert", "moodle-core-notification-confirm", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"]
+                        },
+                        "moodle-core-notification-dialogue": {
+                            "requires": ["base", "node", "panel", "escape", "event-key", "dd-plugin", "moodle-core-widget-focusafterclose", "moodle-core-lockscroll"]
+                        },
+                        "moodle-core-notification-alert": {
+                            "requires": ["moodle-core-notification-dialogue"]
+                        },
+                        "moodle-core-notification-confirm": {
+                            "requires": ["moodle-core-notification-dialogue"]
+                        },
+                        "moodle-core-notification-exception": {
+                            "requires": ["moodle-core-notification-dialogue"]
+                        },
+                        "moodle-core-notification-ajaxexception": {
+                            "requires": ["moodle-core-notification-dialogue"]
+                        },
+                        "moodle-core-popuphelp": {
+                            "requires": ["moodle-core-tooltip"]
+                        },
+                        "moodle-core-tooltip": {
+                            "requires": ["base", "node", "io-base", "moodle-core-notification-dialogue", "json-parse", "widget-position", "widget-position-align", "event-outside", "cache-base"]
+                        },
+                        "moodle-core_availability-form": {
+                            "requires": ["base", "node", "event", "event-delegate", "panel", "moodle-core-notification-dialogue", "json"]
+                        },
+                        "moodle-backup-backupselectall": {
+                            "requires": ["node", "event", "node-event-simulate", "anim"]
+                        },
+                        "moodle-backup-confirmcancel": {
+                            "requires": ["node", "node-event-simulate", "moodle-core-notification-confirm"]
+                        },
+                        "moodle-course-categoryexpander": {
+                            "requires": ["node", "event-key"]
+                        },
+                        "moodle-course-dragdrop": {
+                            "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-course-coursebase", "moodle-course-util"]
+                        },
+                        "moodle-course-management": {
+                            "requires": ["base", "node", "io-base", "moodle-core-notification-exception", "json-parse", "dd-constrain", "dd-proxy", "dd-drop", "dd-delegate", "node-event-delegate"]
+                        },
+                        "moodle-course-util": {
+                            "requires": ["node"],
+                            "use": ["moodle-course-util-base"],
+                            "submodules": {
+                                "moodle-course-util-base": {},
+                                "moodle-course-util-section": {
+                                    "requires": ["node", "moodle-course-util-base"]
+                                },
+                                "moodle-course-util-cm": {
+                                    "requires": ["node", "moodle-course-util-base"]
+                                }
+                            }
+                        },
+                        "moodle-form-dateselector": {
+                            "requires": ["base", "node", "overlay", "calendar"]
+                        },
+                        "moodle-form-passwordunmask": {
+                            "requires": []
+                        },
+                        "moodle-form-shortforms": {
+                            "requires": ["node", "base", "selector-css3", "moodle-core-event"]
+                        },
+                        "moodle-question-chooser": {
+                            "requires": ["moodle-core-chooserdialogue"]
+                        },
+                        "moodle-question-preview": {
+                            "requires": ["base", "dom", "event-delegate", "event-key", "core_question_engine"]
+                        },
+                        "moodle-question-searchform": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-availability_completion-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_date-form": {
+                            "requires": ["base", "node", "event", "io", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_grade-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_group-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_grouping-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_paypal-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_profile-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-mod_assign-history": {
+                            "requires": ["node", "transition"]
+                        },
+                        "moodle-mod_attendance-groupfilter": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-mod_checklist-linkselect": {
+                            "requires": ["node", "event-valuechange"]
+                        },
+                        "moodle-mod_offlinequiz-repaginate": {
+                            "requires": ["base", "event", "node", "io", "moodle-core-notification-dialogue"]
+                        },
+                        "moodle-mod_offlinequiz-offlinequizquestionbank": {
+                            "requires": ["base", "event", "node", "io", "io-form", "yui-later", "moodle-question-qbankmanager", "moodle-qbank_editquestion-chooser", "moodle-question-searchform", "moodle-core-notification"]
+                        },
+                        "moodle-mod_offlinequiz-autosave": {
+                            "requires": ["base", "node", "event", "event-valuechange", "node-event-delegate", "io-form"]
+                        },
+                        "moodle-mod_offlinequiz-modform": {
+                            "requires": ["base", "node", "event"]
+                        },
+                        "moodle-mod_offlinequiz-util": {
+                            "requires": ["node"],
+                            "use": ["moodle-mod_offlinequiz-util-base"],
+                            "submodules": {
+                                "moodle-mod_offlinequiz-util-base": {},
+                                "moodle-mod_offlinequiz-util-slot": {
+                                    "requires": ["node", "moodle-mod_offlinequiz-util-base"]
+                                },
+                                "moodle-mod_offlinequiz-util-page": {
+                                    "requires": ["node", "moodle-mod_offlinequiz-util-base"]
+                                }
+                            }
+                        },
+                        "moodle-mod_offlinequiz-randomquestion": {
+                            "requires": ["base", "event", "node", "io", "moodle-core-notification-dialogue"]
+                        },
+                        "moodle-mod_offlinequiz-dragdrop": {
+                            "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-mod_offlinequiz-offlinequizbase", "moodle-mod_offlinequiz-util-base", "moodle-mod_offlinequiz-util-page", "moodle-mod_offlinequiz-util-slot", "moodle-course-util"]
+                        },
+                        "moodle-mod_offlinequiz-questionchooser": {
+                            "requires": ["moodle-core-chooserdialogue", "moodle-mod_offlinequiz-util", "querystring-parse"]
+                        },
+                        "moodle-mod_offlinequiz-offlinequizbase": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-mod_offlinequiz-toolboxes": {
+                            "requires": ["base", "node", "event", "event-key", "io", "moodle-mod_offlinequiz-offlinequizbase", "moodle-mod_offlinequiz-util-slot", "moodle-core-notification-ajaxexception"]
+                        },
+                        "moodle-mod_quiz-autosave": {
+                            "requires": ["base", "node", "event", "event-valuechange", "node-event-delegate", "io-form"]
+                        },
+                        "moodle-mod_quiz-dragdrop": {
+                            "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-base", "moodle-mod_quiz-util-page", "moodle-mod_quiz-util-slot", "moodle-course-util"]
+                        },
+                        "moodle-mod_quiz-modform": {
+                            "requires": ["base", "node", "event"]
+                        },
+                        "moodle-mod_quiz-questionchooser": {
+                            "requires": ["moodle-core-chooserdialogue", "moodle-mod_quiz-util", "querystring-parse"]
+                        },
+                        "moodle-mod_quiz-quizbase": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-mod_quiz-toolboxes": {
+                            "requires": ["base", "node", "event", "event-key", "io", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-slot", "moodle-core-notification-ajaxexception"]
+                        },
+                        "moodle-mod_quiz-util": {
+                            "requires": ["node", "moodle-core-actionmenu"],
+                            "use": ["moodle-mod_quiz-util-base"],
+                            "submodules": {
+                                "moodle-mod_quiz-util-base": {},
+                                "moodle-mod_quiz-util-slot": {
+                                    "requires": ["node", "moodle-mod_quiz-util-base"]
+                                },
+                                "moodle-mod_quiz-util-page": {
+                                    "requires": ["node", "moodle-mod_quiz-util-base"]
+                                }
+                            }
+                        },
+                        "moodle-message_airnotifier-toolboxes": {
+                            "requires": ["base", "node", "io"]
+                        },
+                        "moodle-block_xp-rulepicker": {
+                            "requires": ["base", "node", "handlebars", "moodle-core-notification-dialogue"]
+                        },
+                        "moodle-block_xp-filters": {
+                            "requires": ["base", "node", "moodle-core-dragdrop", "moodle-core-notification-confirm", "moodle-block_xp-rulepicker"]
+                        },
+                        "moodle-block_xp-notification": {
+                            "requires": ["base", "node", "handlebars", "button-plugin", "moodle-core-notification-dialogue"]
+                        },
+                        "moodle-filter_glossary-autolinker": {
+                            "requires": ["base", "node", "io-base", "json-parse", "event-delegate", "overlay", "moodle-core-event", "moodle-core-notification-alert", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"]
+                        },
+                        "moodle-filter_mathjaxloader-loader": {
+                            "requires": ["moodle-core-event"]
+                        },
+                        "moodle-editor_atto-editor": {
+                            "requires": ["node", "transition", "io", "overlay", "escape", "event", "event-simulate", "event-custom", "node-event-html5", "node-event-simulate", "yui-throttle", "moodle-core-notification-dialogue", "moodle-core-notification-confirm", "moodle-editor_atto-rangy", "handlebars", "timers", "querystring-stringify"]
+                        },
+                        "moodle-editor_atto-plugin": {
+                            "requires": ["node", "base", "escape", "event", "event-outside", "handlebars", "event-custom", "timers", "moodle-editor_atto-menu"]
+                        },
+                        "moodle-editor_atto-menu": {
+                            "requires": ["moodle-core-notification-dialogue", "node", "event", "event-custom"]
+                        },
+                        "moodle-editor_atto-rangy": {
+                            "requires": []
+                        },
+                        "moodle-report_eventlist-eventfilter": {
+                            "requires": ["base", "event", "node", "node-event-delegate", "datatable", "autocomplete", "autocomplete-filters"]
+                        },
+                        "moodle-report_loglive-fetchlogs": {
+                            "requires": ["base", "event", "node", "io", "node-event-delegate"]
+                        },
+                        "moodle-gradereport_history-userselector": {
+                            "requires": ["escape", "event-delegate", "event-key", "handlebars", "io-base", "json-parse", "moodle-core-notification-dialogue"]
+                        },
+                        "moodle-qbank_editquestion-chooser": {
+                            "requires": ["moodle-core-chooserdialogue"]
+                        },
+                        "moodle-tool_capability-search": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-tool_lp-dragdrop-reorder": {
+                            "requires": ["moodle-core-dragdrop"]
+                        },
+                        "moodle-tool_monitor-dropdown": {
+                            "requires": ["base", "event", "node"]
+                        },
+                        "moodle-assignfeedback_editpdf-editor": {
+                            "requires": ["base", "event", "node", "io", "graphics", "json", "event-move", "event-resize", "transition", "querystring-stringify-simple", "moodle-core-notification-dialog", "moodle-core-notification-alert", "moodle-core-notification-warning", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"]
+                        },
+                        "moodle-atto_accessibilitychecker-button": {
+                            "requires": ["color-base", "moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_accessibilityhelper-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_align-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_bold-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_charmap-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_clear-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_collapse-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_emojipicker-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_emoticon-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_equation-button": {
+                            "requires": ["moodle-editor_atto-plugin", "moodle-core-event", "io", "event-valuechange", "tabview", "array-extras"]
+                        },
+                        "moodle-atto_h5p-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_html-beautify": {},
+                        "moodle-atto_html-button": {
+                            "requires": ["promise", "moodle-editor_atto-plugin", "moodle-atto_html-beautify", "moodle-atto_html-codemirror", "event-valuechange"]
+                        },
+                        "moodle-atto_html-codemirror": {
+                            "requires": ["moodle-atto_html-codemirror-skin"]
+                        },
+                        "moodle-atto_image-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_indent-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_italic-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_link-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_managefiles-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_managefiles-usedfiles": {
+                            "requires": ["node", "escape"]
+                        },
+                        "moodle-atto_media-button": {
+                            "requires": ["moodle-editor_atto-plugin", "moodle-form-shortforms"]
+                        },
+                        "moodle-atto_noautolink-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_orderedlist-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_recordrtc-button": {
+                            "requires": ["moodle-editor_atto-plugin", "moodle-atto_recordrtc-recording"]
+                        },
+                        "moodle-atto_recordrtc-recording": {
+                            "requires": ["moodle-atto_recordrtc-button"]
+                        },
+                        "moodle-atto_rtl-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_strike-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_subscript-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_superscript-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_table-button": {
+                            "requires": ["moodle-editor_atto-plugin", "moodle-editor_atto-menu", "event", "event-valuechange"]
+                        },
+                        "moodle-atto_title-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_underline-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_undo-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_unorderedlist-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        }
+                    }
+                },
+                "gallery": {
+                    "name": "gallery",
+                    "base": "https:\/\/moodle.bitsathy.ac.in\/lib\/yuilib\/gallery\/",
+                    "combine": true,
+                    "comboBase": "https:\/\/moodle.bitsathy.ac.in\/theme\/yui_combo.php?",
+                    "ext": false,
+                    "root": "gallery\/1695712818\/",
+                    "patterns": {
+                        "gallery-": {
+                            "group": "gallery"
+                        }
+                    }
+                }
+            },
+            "modules": {
+                "core_filepicker": {
+                    "name": "core_filepicker",
+                    "fullpath": "https:\/\/moodle.bitsathy.ac.in\/lib\/javascript.php\/1695712818\/repository\/filepicker.js",
+                    "requires": ["base", "node", "node-event-simulate", "json", "async-queue", "io-base", "io-upload-iframe", "io-form", "yui2-treeview", "panel", "cookie", "datatable", "datatable-sort", "resize-plugin", "dd-plugin", "escape", "moodle-core_filepicker", "moodle-core-notification-dialogue"]
+                },
+                "core_comment": {
+                    "name": "core_comment",
+                    "fullpath": "https:\/\/moodle.bitsathy.ac.in\/lib\/javascript.php\/1695712818\/comment\/comment.js",
+                    "requires": ["base", "io-base", "node", "json", "yui2-animation", "overlay", "escape"]
+                },
+                "mathjax": {
+                    "name": "mathjax",
+                    "fullpath": "https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"
+                }
+            }
+        };
+        M.yui.loader = {
+            modules: {}
+        };
+
+        //]]>
+    </script>
+    <meta name="description" content="Bannari Amman Institute of Technology - Moodle LMS Platform" />
+    <!-- CSS print media -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:site" value="BANNARI AMMAN INSTITUTE OF TECHNOLOGY" />
+    <meta name="twitter:title" value="BANNARI AMMAN INSTITUTE OF TECHNOLOGY" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="BANNARI AMMAN INSTITUTE OF TECHNOLOGY" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta name="og:site_name" value="BANNARI AMMAN INSTITUTE OF TECHNOLOGY" />
+
+    <!-- Chrome, Firefox OS and Opera on Android topbar color -->
+    <meta name="theme-color" content="#3A454b" />
+
+    <!-- Windows Phone topbar color -->
+    <meta name="msapplication-navbutton-color" content="#3A454b" />
+
+    <!-- iOS Safari topbar color -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3A454b" />
+
+</head>
+
+<body id="page-site-index" class="limitedwidth format-site course path-site chrome android dir-ltr lang-en_us yui-skin-sam yui3-skin-sam moodle-bitsathy-ac-in pagelayout-frontpage course-1 context-2 notloggedin mobiletheme theme_adaptable two-column  fullin header-style1 showblockicons standard nomobilenavigation">
+
+    <div>
+        <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+    </div>
+    <script src="https://moodle.bitsathy.ac.in/lib/javascript.php/1695712818/lib/polyfills/polyfill.js"></script>
+    <script src="https://moodle.bitsathy.ac.in/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script>
+    <script src="https://moodle.bitsathy.ac.in/theme/jquery.php/core/jquery-3.6.1.min.js"></script>
+    <script src="https://moodle.bitsathy.ac.in/theme/jquery.php/theme_adaptable/pace-min.js"></script>
+    <script src="https://moodle.bitsathy.ac.in/theme/jquery.php/theme_adaptable/jquery-flexslider-min.js"></script>
+    <script src="https://moodle.bitsathy.ac.in/theme/jquery.php/theme_adaptable/tickerme.js"></script>
+    <script src="https://moodle.bitsathy.ac.in/theme/jquery.php/theme_adaptable/jquery-easing-min.js"></script>
+    <script src="https://moodle.bitsathy.ac.in/theme/jquery.php/theme_adaptable/adaptable_v2_1_1_2.js"></script>
+    <script src="https://moodle.bitsathy.ac.in/lib/javascript.php/1695712818/lib/javascript-static.js"></script>
+    <script>
+        //<![CDATA[
+        document.body.className += ' jsenabled';
+        //]]>
+    </script>
+
+
+    <div id="page-wrapper">
+        <header id="adaptable-page-header-wrapper">
+            <div id="header1" class="above-header">
+                <div class="container">
+                    <nav class="navbar navbar-expand btco-hover-menu">
+                        <button class="navbar-toggler nav-link aabtn d-block d-lg-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_adaptable-drawers-primary">
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                    <span class="sr-only">Side panel</span>
+                </button>
+
+                        <div class="collapse navbar-collapse">
+                            <div class="my-auto m-1"></div>
+                            <ul class="navbar-nav ml-auto my-auto">
+
+                                <li class="nav-item navbarsearchsocial mx-md-1 my-auto d-md-block d-lg-none my-auto">
+                                    <div id="searchinput-navbar-664616f3ceed9664616f3cd5062" class="simplesearchform">
+                                        <div class="collapse" id="searchform-navbar">
+                                            <form autocomplete="off" action="https://moodle.bitsathy.ac.in/course/search.php" method="get" accept-charset="utf-8" class="mform form-inline searchform-navbar">
+                                                <input type="hidden" name="context" value="2">
+                                                <div class="input-group">
+                                                    <label for="searchinput-664616f3ceed9664616f3cd5062">
+                    <span class="sr-only">Course search</span>
+                </label>
+                                                    <input type="text" id="searchinput-664616f3ceed9664616f3cd5062" class="form-control withclear" placeholder="Course search" aria-label="Course search" name="q" data-region="input" autocomplete="off">
+                                                    <a class="btn btn-close" data-action="closesearch" data-toggle="collapse" href="#searchform-navbar" role="button">
+                        <i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i>
+                        <span class="sr-only">Close</span>
+                    </a>
+                                                    <div class="input-group-append">
+                                                        <button type="submit" class="btn btn-submit" data-action="submit">
+                        <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                        <span class="sr-only">Course search</span>
+                    </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <a class="btn btn-open rounded-0 nav-link" data-toggle="collapse" data-action="opensearch" href="#searchform-navbar" role="button" aria-expanded="false" aria-controls="searchform-navbar" title="Toggle search input">
+        <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+        <span class="sr-only">Toggle search input</span>
+    </a>
+                                    </div>
+                                </li>
+
+
+                                <li class="nav-item dropdown ml-2 my-auto">
+                                    <li class="nav-item dropdown my-auto"><a href="https://moodle.bitsathy.ac.in/" class="nav-link dropdown-toggle my-auto" role="button" id="langmenu0" aria-haspopup="true" aria-expanded="false" aria-controls="dropdownlangmenu0" data-target="https://moodle.bitsathy.ac.in/"
+                                            data-toggle="dropdown" title="Language"><i class="icon fa fa-globe fa-lg"></i><span class="langdesc">English (United States) ‎(en_us)‎</span></a>
+                                        <ul role="menu" class="dropdown-menu" id="dropdownlangmenu0" aria-labelledby="langmenu0">
+                                            <li><a title="English ‎(en)‎" class="dropdown-item" href="https://moodle.bitsathy.ac.in/?lang=en">English ‎(en)‎</a></li>
+                                            <li><a title="English (United States) ‎(en_us)‎" class="dropdown-item" href="https://moodle.bitsathy.ac.in/?lang=en_us">English (United States) ‎(en_us)‎</a></li>
+                                        </ul>
+                                    </li>
+                                </li>
+
+
+
+                                <li class="nav-item"><a class="btn-login d-inline-block" href="https://moodle.bitsathy.ac.in/login/index.php">Log in</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="page-header" class="container d-none d-lg-block">
+                <div class="row d-flex justify-content-start align-items-center h-100 ">
+                    <div class="col-lg-8 p-0">
+                        <div class="bd-highlight d-flex">
+                            <div class="pb-2 pr-3 pt-2 bd-highlight d-none d-lg-inline-block"><a href=https://moodle.bitsathy.ac.in aria-label="Home" title="BANNARI AMMAN INSTITUTE OF TECHNOLOGY"><img src=//moodle.bitsathy.ac.in/pluginfile.php/1/theme_adaptable/logo/1695712818/bit-logo-text.png id="logo" alt="Logo"></a></div>
+                            <div id="sitetitle" class="bd-highlight pt-2 d-none d-lg-inline-block">
+                                <p dir="ltr" style="text-align:left;">BIT Online Learning Management System</p>
+                                <p dir="ltr" style="text-align:left;"><br /></p>
+                            </div>
+                        </div>
+                        <div id="course-header">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="headersearch pagelayoutoriginal d-none d-lg-block">
+                            <div id="searchinput-navbar-664616f3cf1bc664616f3cd5063" class="simplesearchform">
+                                <div class="collapse" id="searchform-navbar">
+                                    <form autocomplete="off" action="https://moodle.bitsathy.ac.in/course/search.php" method="get" accept-charset="utf-8" class="mform form-inline searchform-navbar">
+                                        <input type="hidden" name="context" value="2">
+                                        <div class="input-group">
+                                            <label for="searchinput-664616f3cf1bc664616f3cd5063">
+                    <span class="sr-only">Course search</span>
+                </label>
+                                            <input type="text" id="searchinput-664616f3cf1bc664616f3cd5063" class="form-control withclear" placeholder="Course search" aria-label="Course search" name="q" data-region="input" autocomplete="off">
+                                            <a class="btn btn-close" data-action="closesearch" data-toggle="collapse" href="#searchform-navbar" role="button">
+                        <i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i>
+                        <span class="sr-only">Close</span>
+                    </a>
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-submit" data-action="submit">
+                        <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                        <span class="sr-only">Course search</span>
+                    </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <a class="btn btn-open rounded-0 nav-link" data-toggle="collapse" data-action="opensearch" href="#searchform-navbar" role="button" aria-expanded="false" aria-controls="searchform-navbar" title="Toggle search input">
+        <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+        <span class="sr-only">Toggle search input</span>
+    </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </header>
+
+
+        <div class="drawer drawer-left drawer-primary d-print-none not-initialized" data-region="fixed-drawer" id="theme_adaptable-drawers-primary" data-preference="" data-state="show-drawer-primary" data-forceopen="0" data-close-on-resize="1">
+            <div class="drawerheader">
+                <button class="btn drawertoggle icon-no-margin hidden" data-toggler="drawers" data-action="closedrawer" data-target="theme_adaptable-drawers-primary" data-toggle="tooltip" data-placement="right" title="Close drawer">
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i>
+        </button>
+            </div>
+            <div class="drawercontent drag-container" data-usertour="scroller">
+                <div class="list-group">
+                </div>
+
+            </div>
+        </div>
+        <div id="page" class="">
+            <div class="drawer-toggles d-flex">
+            </div>
+            <div class="drawer-toggles d-flex">
+            </div>
+            <div id="ticker-wrap" class="clearfix container d-none d-lg-block">
+                <div class="pull-left" id="ticker-announce">Announcements</div>
+                <ul id="ticker">
+                    <p>No news items to display</p>
+                </ul>
+            </div>
+            <div id="maincontainer" class="container outercont">
+                <div id="page-content" class="row">
+                    <div id="page-navbar" class="col-12">
+                        <nav class="breadcrumb-button"></nav>
+                    </div>
+
+                    <div id="region-main-box" class="col-12">
+                        <section id="region-main">
+                            <span class="notifications" id="user-notifications"></span>
+                            <div role="main"><span id="maincontent"></span>
+                                <div class="course-content">
+                                    <div class="sitetopic">
+                                        <ul class="topics frontpage">
+                                            <li id="section-1" class="section course-section main  clearfix
+                             
+                            " data-sectionid="1" data-sectionreturnid="1" data-for="section" data-id="1" data-number="1">
+                                                <div class="course-section-header d-flex" data-for="section_title" data-id="1" data-number="1">
+                                                    <div data-region="sectionbadges" class="sectionbadges d-flex align-items-center">
+                                                    </div>
+                                                </div>
+                                                <div id="coursecontentcollapse1" class="content 
+                                    
+                                ">
+                                                    <div class=" my-3" data-for="sectioninfo">
+                                                        <div class="course-description-item summarytext">
+                                                            <div class="description-inner">
+                                                                <div class="no-overflow">
+                                                                    <h4 style="text-align: left;">Welcome to BIT Moodle page. We wish you a happy learning.</h4>
+                                                                    <p dir="ltr" style="text-align: left;"><img src="https://moodle.bitsathy.ac.in/pluginfile.php/2/course/section/1/BIT%2025%20years.jpg" alt="" width="1000" height="966" role="presentation" class="img-responsive atto_image_button_text-bottom"><br></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="section_availability course-description-item">
+                                                        </div>
+                                                    </div>
+                                                    <ul class="section m-0 p-0 img-text " data-for="cmlist">
+                                                    </ul>
+
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><br /></div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <footer id="page-footer" class="d-none d-lg-block">
+
+                <div id="course-footer"></div>
+                <div class="container blockplace1">
+                    <div class="row"></div>
+                </div>
+                <div class="info container2 clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="tool_usertours-resettourcontainer"></div>
+                            <div class="col-md-4 my-md-0 my-2 helplink"></div>
+                            <div class="col-md-4 my-md-0 my-2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 my-md-0 my-2"></div>
+                        </div>
+                    </div>
+            </footer>
+
+            <div id="back-to-top"><i class="fa fa-angle-up "></i></div>
+
+            </div>
+        </div>
+        <script>
+            //<![CDATA[
+            var require = {
+                baseUrl: 'https://moodle.bitsathy.ac.in/lib/requirejs.php/1695712818/',
+                // We only support AMD modules with an explicit define() statement.
+                enforceDefine: true,
+                skipDataMain: true,
+                waitSeconds: 0,
+
+                paths: {
+                    jquery: 'https://moodle.bitsathy.ac.in/lib/javascript.php/1695712818/lib/jquery/jquery-3.6.1.min',
+                    jqueryui: 'https://moodle.bitsathy.ac.in/lib/javascript.php/1695712818/lib/jquery/ui-1.13.2/jquery-ui.min',
+                    jqueryprivate: 'https://moodle.bitsathy.ac.in/lib/javascript.php/1695712818/lib/requirejs/jquery-private'
+                },
+
+                // Custom jquery config map.
+                map: {
+                    // '*' means all modules will get 'jqueryprivate'
+                    // for their 'jquery' dependency.
+                    '*': {
+                        jquery: 'jqueryprivate'
+                    },
+                    // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+                    '*': {
+                        process: 'core/first'
+                    },
+
+                    // 'jquery-private' wants the real jQuery module
+                    // though. If this line was not here, there would
+                    // be an unresolvable cyclic dependency.
+                    jqueryprivate: {
+                        jquery: 'jquery'
+                    }
+                }
+            };
+
+            //]]>
+        </script>
+        <script src="https://moodle.bitsathy.ac.in/lib/javascript.php/1695712818/lib/requirejs/require.min.js"></script>
+        <script>
+            //<![CDATA[
+            M.util.js_pending("core/first");
+            require(['core/first'], function() {
+                require(['core/prefetch']);
+                require(["media_videojs/loader"], function(loader) {
+                    loader.setUp('en');
+                });;
+                M.util.js_pending('theme_adaptable/adaptable');
+                require(['theme_adaptable/adaptable'], function(amd) {
+                    amd.init();
+                    M.util.js_complete('theme_adaptable/adaptable');
+                });;
+                M.util.js_pending('theme_adaptable/bsoptions');
+                require(['theme_adaptable/bsoptions'], function(amd) {
+                    amd.init({
+                        "stickynavbar": true
+                    });
+                    M.util.js_complete('theme_adaptable/bsoptions');
+                });;
+                M.util.js_pending('block_settings/settingsblock');
+                require(['block_settings/settingsblock'], function(amd) {
+                    amd.init("183", null);
+                    M.util.js_complete('block_settings/settingsblock');
+                });;
+
+                require(
+                    [
+                        'jquery',
+                    ],
+                    function(
+                        $
+                    ) {
+                        var uniqid = "664616f3ceed9664616f3cd5062";
+                        var container = $('#searchinput-navbar-' + uniqid);
+                        var opensearch = container.find('[data-action="opensearch"]');
+                        var input = container.find('[data-region="input"]');
+                        var submit = container.find('[data-action="submit"]');
+
+                        submit.on('click', function(e) {
+                            if (input.val() === '') {
+                                e.preventDefault();
+                            }
+                        });
+                        container.on('hidden.bs.collapse', function() {
+                            opensearch.removeClass('d-none');
+                            input.val('');
+                        });
+                        container.on('show.bs.collapse', function() {
+                            opensearch.addClass('d-none');
+                        });
+                        container.on('shown.bs.collapse', function() {
+                            input.focus();
+                        });
+                    });;
+
+                require(
+                    [
+                        'jquery',
+                    ],
+                    function(
+                        $
+                    ) {
+                        var uniqid = "664616f3cf1bc664616f3cd5063";
+                        var container = $('#searchinput-navbar-' + uniqid);
+                        var opensearch = container.find('[data-action="opensearch"]');
+                        var input = container.find('[data-region="input"]');
+                        var submit = container.find('[data-action="submit"]');
+
+                        submit.on('click', function(e) {
+                            if (input.val() === '') {
+                                e.preventDefault();
+                            }
+                        });
+                        container.on('hidden.bs.collapse', function() {
+                            opensearch.removeClass('d-none');
+                            input.val('');
+                        });
+                        container.on('show.bs.collapse', function() {
+                            opensearch.addClass('d-none');
+                        });
+                        container.on('shown.bs.collapse', function() {
+                            input.focus();
+                        });
+                    });;
+
+                require(['theme_boost/drawers']);;
+                M.util.js_pending('core/notification');
+                require(['core/notification'], function(amd) {
+                    amd.init(2, []);
+                    M.util.js_complete('core/notification');
+                });;
+                M.util.js_pending('core/log');
+                require(['core/log'], function(amd) {
+                    amd.setConfig({
+                        "level": "warn"
+                    });
+                    M.util.js_complete('core/log');
+                });;
+                M.util.js_pending('core/page_global');
+                require(['core/page_global'], function(amd) {
+                    amd.init();
+                    M.util.js_complete('core/page_global');
+                });;
+                M.util.js_pending('core/utility');
+                require(['core/utility'], function(amd) {
+                    M.util.js_complete('core/utility');
+                });
+                M.util.js_complete("core/first");
+            });
+            //]]>
+        </script>
+        <script>
+            //<![CDATA[
+            M.str = {
+                "moodle": {
+                    "lastmodified": "Last modified",
+                    "name": "Name",
+                    "error": "Error",
+                    "info": "Information",
+                    "yes": "Yes",
+                    "no": "No",
+                    "cancel": "Cancel",
+                    "confirm": "Confirm",
+                    "areyousure": "Are you sure?",
+                    "closebuttontitle": "Close",
+                    "unknownerror": "Unknown error",
+                    "file": "File",
+                    "url": "URL",
+                    "collapseall": "Collapse all",
+                    "expandall": "Expand all"
+                },
+                "repository": {
+                    "type": "Type",
+                    "size": "Size",
+                    "invalidjson": "Invalid JSON string",
+                    "nofilesattached": "No files attached",
+                    "filepicker": "File picker",
+                    "logout": "Logout",
+                    "nofilesavailable": "No files available",
+                    "norepositoriesavailable": "Sorry, none of your current repositories can return files in the required format.",
+                    "fileexistsdialogheader": "File exists",
+                    "fileexistsdialog_editor": "A file with that name has already been attached to the text you are editing.",
+                    "fileexistsdialog_filemanager": "A file with that name has already been attached",
+                    "renameto": "Rename to \"{$a}\"",
+                    "referencesexist": "There are {$a} links to this file",
+                    "select": "Select"
+                },
+                "admin": {
+                    "confirmdeletecomments": "You are about to delete comments, are you sure?",
+                    "confirmation": "Confirmation"
+                },
+                "debug": {
+                    "debuginfo": "Debug info",
+                    "line": "Line",
+                    "stacktrace": "Stack trace"
+                },
+                "langconfig": {
+                    "labelsep": ":"
+                }
+            };
+            //]]>
+        </script>
+        <script>
+            //<![CDATA[
+            (function() {
+                Y.use("moodle-filter_mathjaxloader-loader", function() {
+                    M.filter_mathjaxloader.configure({
+                        "mathjaxconfig": "MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n",
+                        "lang": "en"
+                    });
+                });
+                M.util.help_popups.setup(Y);
+                M.util.js_pending('random664616f3cd5064');
+                Y.on('domready', function() {
+                    M.util.js_complete("init");
+                    M.util.js_complete('random664616f3cd5064');
+                });
+            })();
+            //]]>
+        </script>
+</body>
+
+</html>
+<script type="text/javascript">
+    M.util.js_pending('theme_boost/loader');
+    require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+        Drawer.init();
+        M.util.js_complete('theme_boost/loader');
+    });
+</script>
